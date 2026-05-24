@@ -1,0 +1,170 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+body {
+  min-height: 100vh;
+  background: #0f0f0f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* PLAYER */
+
+.player {
+  width: 85vw;
+  max-width: 1000px;
+
+  background: #181818;
+  border-radius: 1rem;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+/* VIDEO */
+
+.video-wrapper {
+  width: 100%;
+  background: black;
+}
+
+.video {
+  width: 100%;
+  display: block;
+
+  cursor: pointer;
+}
+
+/* CONTROLS */
+
+.controls {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* TIMELINE */
+
+.timeline-container {
+  width: 100%;
+}
+
+.timeline {
+  width: 100%;
+  height: 0.5rem;
+
+  background: #333;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+
+  background: #ff4d4d;
+
+  border-radius: inherit;
+}
+
+/* BOTTOM CONTROLS */
+
+.controls-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* LEFT / RIGHT */
+
+.left-controls,
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* BUTTONS */
+
+.control-btn {
+  padding: 0.7rem 1rem;
+
+  background: #262626;
+
+  color: white;
+
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.control-btn:hover {
+  background: #3a3a3a;
+}
+
+/* TIME */
+
+.time {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+/* VOLUME */
+
+.volume-slider {
+  width: 8rem;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .player {
+    width: 95vw;
+  }
+
+  .controls-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right-controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .volume-slider {
+    width: 100%;
+  }
+
+}
