@@ -7,6 +7,7 @@ const muteVolume = document.querySelector(".mute-btn");
 const volumeSlider = document.querySelector(".volume-slider");
 const fullscreenButton = document.querySelector(".fullscreen-btn");
 const timeline = document.querySelector(".timeline");
+const Player = document.querySelector(".player")
 
 function togglePlay() {
   if (video.paused) {
@@ -49,3 +50,25 @@ function formatTime(time) {
 playBtn.addEventListener("click", togglePlay);
 video.addEventListener("click", togglePlay);
 
+//function for making full screen mode ---
+
+const toggleFullscreen = (e = Player) => {
+  if (!document.fullscreenElement) {
+    if (e.requestFullscreen) {
+      e.requestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+};
+
+
+fullscreenButton.addEventListener("click",function() {
+ toggleFullscreen()
+});
+
+video.addEventListener("dblclick", function(){
+  toggleFullscreen()
+})
